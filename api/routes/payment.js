@@ -8,7 +8,7 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     try {
-      res.send("You have a total of: 2400$");
+      res.send("your payment is...");
     } catch (error) {
       console.log(error);
     }

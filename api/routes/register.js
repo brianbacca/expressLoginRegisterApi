@@ -31,13 +31,15 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
-  const allUser = await User.findAll();
-  if (allUser.length === 0) {
-    return res.send("no hay nati ");
-  } else {
-    return res.send(allUser);
-  }
-});
+//Find All users registered
+
+// router.get("/", async (req, res) => {
+//   const allUser = await User.findAll();
+//   if (allUser.length === 0) {
+//     return res.send("no hay nati ");
+//   } else {
+//     return res.send(allUser);
+//   }
+// });
 
 module.exports = router;
