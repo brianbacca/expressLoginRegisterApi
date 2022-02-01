@@ -5,10 +5,9 @@ const cors = require("cors");
 const dotenv = require("dotenv");
 dotenv.config();
 require("./db.js");
+require("./auth/passaport");
 
-
-
-const  router = require("./routes")
+const router = require("./routes");
 
 const app = express();
 
@@ -28,7 +27,7 @@ app.use(function (req, res, next) {
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
-  console.err(err);
+  console.log(err);
 });
 
 module.exports = app;
